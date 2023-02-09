@@ -9,17 +9,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Thirty"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Thirty">
         <activity
-            android:name=".GameResult"
-            android:exported="false" />
-        <activity
-            android:name=".Dice"
+            android:name=".controller.GameResult"
             android:exported="false" />
         <activity
             android:name=".controller.MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
