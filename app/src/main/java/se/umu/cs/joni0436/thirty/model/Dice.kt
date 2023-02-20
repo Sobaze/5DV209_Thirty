@@ -5,8 +5,8 @@ import android.os.Parcelable
 
 class Dice(): Parcelable  {
     // dice has a number from 1-6
-    private var diceVal: Int = 0
-    //var diceVal: Int = IntRange(1, 6).random()
+    //var diceVal = 0
+    var diceVal: Int = IntRange(1, 6).random()
     // a dice should be able to be selected
     var isDiceSelected: Boolean = false
 
@@ -15,8 +15,8 @@ class Dice(): Parcelable  {
         isDiceSelected = parcel.readByte() != 0.toByte()
     }
 
-    fun roll(diceSize: Int) {
-        diceVal = IntRange(1, diceSize).random()
+    fun roll() {
+        diceVal = IntRange(1, 6).random()
     }
 
     fun getDiceValue(): Int {

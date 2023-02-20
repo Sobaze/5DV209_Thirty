@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thirty">
         <activity
-            android:name=".controller.GameResult"
+            android:name=".controller.GameResultActivity"
             android:exported="false" />
         <activity
             android:name=".controller.MainActivity"

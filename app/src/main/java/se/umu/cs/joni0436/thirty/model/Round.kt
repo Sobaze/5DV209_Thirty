@@ -6,18 +6,20 @@ import android.os.Parcelable
 /**
  *
  * @param userChoice - Represents the option the user picks to combine the total sum from the dices
- * @param scoreForRound - Is an arraylist showing the value of each dice for this round
+ * @param scoreCombinations - Is an arraylist showing the value of each dice for this round
  */
-data class Round(val userChoice: String?, val scoreForRound: ArrayList<Int>): Parcelable {
+data class Round(val userChoice: String?, val scoreCombinations: ArrayList<Int>): Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readArrayList(Int::class.java.classLoader) as ArrayList<Int>
-    )
+    ){
+
+    }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(userChoice)
-        parcel.writeList(scoreForRound)
+        parcel.writeList(scoreCombinations)
     }
 
     override fun describeContents(): Int {
